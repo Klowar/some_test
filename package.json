@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "printer.js",
+  "scripts": {
+    "dev": "ts-node ./src/printer.ts",
+    "start": "node ./build/printer.js",
+    "build": "tsc",
+    "clean": "rd /s /q build",
+    "watch": "tsc --watch",
+    "buildClean": "pnpm run clean && pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
