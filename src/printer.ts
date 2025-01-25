@@ -99,10 +99,10 @@ const isPositive = (n: number) => n > 0;
 const swapsToBreakAllStreaks = (arr: number[], maxStreak = 3) => {
     let res = 0;
     let lastStreak = 1;
-    for (let i = 1; i + 1 < arr.length; i++) {
+    for (let i = 0; i + 1 < arr.length; i++) {
         if (Math.sign(arr[i]) == Math.sign(arr[i + 1])) lastStreak++;
         else {
-            res += Math.floor(lastStreak / 3);
+            res += Math.floor(lastStreak / maxStreak);
             lastStreak = 1;
         }
     }
